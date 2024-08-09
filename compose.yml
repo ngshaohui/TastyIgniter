@@ -3,8 +3,9 @@ services:
     build: .
     ports:
       - 8000:80
-    # volumes:
-    #   - ./php.ini:/usr/local/etc/php/php.ini
+    volumes:
+      - ./configs/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./docker/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
     depends_on:
       db:
         condition: service_healthy

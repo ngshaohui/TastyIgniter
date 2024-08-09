@@ -1,5 +1,8 @@
 FROM php:8.2.22-apache
 
+# xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
 # install composer https://stackoverflow.com/a/58694421/3826254
 COPY --from=composer:2.7.7 /usr/bin/composer /usr/local/bin/composer
 
