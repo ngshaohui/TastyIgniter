@@ -38,6 +38,9 @@ RUN apt-get update && apt-get install -y \
 # php ext mysql
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
 
+# php exif
+RUN docker-php-ext-install exif
+
 # setup cron jobs
 
 RUN apt-get update && apt-get install -y cron
