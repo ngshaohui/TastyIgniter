@@ -12,3 +12,8 @@ Since the php application exists inside a docker container, it requires
 xdebug.client_host=host.docker.internal
 xdebug.start_with_request=yes
 ```
+
+## TODO
+
+- quick way to reset the application to a clean slate?
+- fast way to seed data?
